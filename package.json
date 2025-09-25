@@ -8,5 +8,16 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucassmunir/PdP-TP1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lucassmunir/PdP-TP1/issues"
+  },
+  "homepage": "https://github.com/lucassmunir/PdP-TP1#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
 }

@@ -1,3 +1,4 @@
+// Funciones básicas
 function sumar(a, b) {
   if (typeof a !== "number" || typeof b !== "number") {
     console.log("Ambos argumentos deben ser números");
@@ -34,68 +35,59 @@ function dividir(a, b) {
   return a / b;
 }
 
-const readline = require("readline");
+// --- Uso de prompt-sync ---
+const prompt = require("prompt-sync")({ sigint: true });
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
-
+// Mostrar menú
 function mostrarMenu() {
-  console.log("  [1] Sumar ➕");
+  console.log("\n  [1] Sumar ➕");
   console.log("  [2] Restar ➖");
   console.log("  [3] Multiplicar ✖️");
   console.log("  [4] Dividir ➗");
 }
 
+// Saludo inicial
 function saludo() {
   console.log("🤖 ¡Bienvenido a la calculadora!");
-  rl.question("🤖 ¿Cuál es tu nombre?: ", (nombre) => {
-    console.log(`🤖 ¡Hola, ${nombre}!`);
-    pedirDatos();
-  });
+  const nombre = prompt("🤖 ¿Cuál es tu nombre?: ");
+  console.log(`🤖 ¡Hola, ${nombre}!`);
+  pedirDatos();
 }
 
+// Pedir datos y operar
 function pedirDatos() {
-  rl.question("🤖 Ingresá el primer número: ", (a) => {
-    a = parseFloat(a);
-    mostrarMenu();
-    rl.question("🤖 ¿Qué deseas hacer? ", (opcion) => {
-      if (
-        opcion !== "1" &&
-        opcion !== "2" &&
-        opcion !== "3" &&
-        opcion !== "4"
-      ) {
-        console.log("🤖 Opción no válida");
-        rl.close();
-        return;
-      }
-      rl.question("🤖 Ingresá el segundo número: ", (b) => {
-        b = parseFloat(b);
-        opcion = parseInt(opcion);
-        let resultado = null;
-        switch (opcion) {
-          case 1:
-            resultado = sumar(a, b);
-            break;
-          case 2:
-            resultado = restar(a, b);
-            break;
-          case 3:
-            resultado = multiplicar(a, b);
-            break;
-          case 4:
-            resultado = dividir(a, b);
-            break;
-        }
-        if (resultado !== null) {
-          console.log(`🤖 El resultado es: ${resultado}`);
-        }
-        rl.close();
-      });
-    });
-  });
+  const a = parseFloat(prompt("🤖 Ingresá el primer número: "));
+
+  mostrarMenu();
+  const opcion = prompt("🤖 ¿Qué deseas hacer? ");
+
+  if (!["1", "2", "3", "4"].includes(opcion)) {
+    console.log("🤖 Opción no válida");
+    return;
+  }
+
+  const b = parseFloat(prompt("🤖 Ingresá el segundo número: "));
+
+  let resultado = null;
+  switch (parseInt(opcion)) {
+    case 1:
+      resultado = sumar(a, b);
+      break;
+    case 2:
+      resultado = restar(a, b);
+      break;
+    case 3:
+      resultado = multiplicar(a, b);
+      break;
+    case 4:
+      resultado = dividir(a, b);
+      break;
+  }
+
+  if (resultado !== null) {
+    console.log(`🤖 El resultado es: ${resultado}`);
+  }
 }
 
+// --- Inicia el programa ---
 saludo();

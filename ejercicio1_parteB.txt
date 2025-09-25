@@ -1,0 +1,28 @@
+
+1. ¿Tiene una sintaxis y una semántica bien definida? ¿Existe documentación oficial?
+
+    Sí, tiene una sintaxis clara y una semántica definida en el estándar ECMAScript. Existe documentación oficial en ECMA y guías como la de MDN Web Docs.
+
+2. ¿Es posible comprobar el código producido en ese lenguaje?
+
+    El código no se compila de manera tradicional, sino que se interpreta. Los navegadores y entornos como Node.js detectan errores de sintaxis y algunos de ejecución, pero muchos errores lógicos solo aparecen al correr el programa.
+
+3. ¿Es confiable?
+
+    Es confiable en cuanto a portabilidad y ejecución en distintos entornos, pero al ser débilmente tipado pueden aparecer errores inesperados si no se programa con cuidado.
+
+4. ¿Es ortogonal?
+
+    No es totalmente ortogonal. Algunas construcciones del lenguaje no funcionan igual en todos los contextos (por ejemplo, diferencias entre null, undefined, o el comportamiento de conversión de tipos).
+
+5. ¿Cuáles son sus características de consistencia y uniformidad?
+
+    Tiene una sintaxis bastante uniforme en sus estructuras de control y funciones. Sin embargo, algunas excepciones y “quirks” del lenguaje rompen la uniformidad (ejemplo: == frente a ===).
+
+6. ¿Es extensible? ¿Hay subconjuntos de ese lenguaje?
+
+    Es extensible mediante librerías y frameworks. No existen subconjuntos oficiales, aunque en la práctica se usan estilos o “subset” de JavaScript, como Strict Mode o TypeScript (superset que agrega tipado).
+
+7. El código producido, ¿es transportable? 
+
+    El código es muy portable, ya que JavaScript se ejecuta en todos los navegadores modernos y en plataformas de servidor como Node.js, con mínimas diferencias entre entornos.

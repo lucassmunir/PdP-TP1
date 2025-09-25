@@ -1,0 +1,34 @@
+
+1. ¿Cuáles son las reglas escritas del lenguaje? 
+
+    Las reglas escritas de JavaScript en este paradigma incluyen:
+
+    -Declaración de variables (let, const, antes también var).
+    -Uso de estructuras de control secuenciales, condicionales y repetitivas (if, else, switch, for, while, do-while).
+    -Definición de funciones para dividir el programa en partes reutilizables (function miFuncion() { ... }).
+    -Uso de operadores aritméticos, lógicos y relacionales bien definidos.
+    -Sintaxis basada en bloques delimitados por llaves { } y sentencias terminadas en ; (aunque no siempre obligatorio).
+    -En resumen, en el paradigma estructurado, JavaScript se basa en organizar el código en bloques y funciones que siguen un flujo controlado.
+
+2. ¿Qué características particulares del lenguaje se cree que sean "mejores" que en otros lenguajes?
+
+    Muchos programadores consideran que, incluso en su forma estructurada, JavaScript tiene ventajas:
+
+    -Simplicidad de la sintaxis: se parece a C y Java, por lo que es fácil de aprender si conocés esos lenguajes.
+    -Flexibilidad: permite escribir programas estructurados de forma rápida, sin necesidad de compilación previa (se ejecuta en el navegador o en Node.js).
+    -Ubicuidad: corre en prácticamente todos los navegadores y plataformas, lo que lo hace accesible en comparación con otros lenguajes.
+    -Rapidez para probar y depurar: basta con un navegador y consola para ver resultados al instante.
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
